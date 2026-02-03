@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5-File Website (AI) — No Framework</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">◎</div>
+        <div>
+          <h1 class="title">No-Framework Mini Dashboard</h1>
+          <p class="subtitle">Search, filter, and save preferences (theme) — 5 files only.</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn" type="button" aria-label="Toggle theme">
+          Toggle theme
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls card">
+        <div class="control">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="text" placeholder="Try: api, css, mongodb..." autocomplete="off" />
+        </div>
+
+        <div class="control">
+          <label for="categorySelect">Category</label>
+          <select id="categorySelect">
+            <option value="all">All</option>
+          </select>
+        </div>
+
+        <div class="control control--inline">
+          <span class="muted" id="resultCount">0 results</span>
+          <button id="resetBtn" class="btn btn--ghost" type="button">Reset</button>
+        </div>
+      </section>
+
+      <section class="grid" id="cardGrid" aria-live="polite"></section>
+
+      <section class="card footer">
+        <p>
+          Tip: Edit <code>data.js</code> to add more items. This site demonstrates:
+          <strong>DOM rendering</strong>, <strong>events</strong>, <strong>filtering</strong>,
+          <strong>state</strong>, and <strong>localStorage</strong>.
+        </p>
+      </section>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
